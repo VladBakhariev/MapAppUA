@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-struct Location {
+struct Location: Identifiable {
     let name: String
     let cityName: String
     let coordinates: CLLocationCoordinate2D
@@ -16,4 +16,12 @@ struct Location {
     let imageNames: [String]
     let link: String
     
+    
+    //Identifable 
+    var id: String {
+        //name = "Colosseum"
+        //cityName = "Rome"
+        //id = "ColosseumRome"
+        name + cityName
+    }
 }
