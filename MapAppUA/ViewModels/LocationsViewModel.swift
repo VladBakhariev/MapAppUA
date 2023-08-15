@@ -15,7 +15,7 @@ class LocationsViewModel: ObservableObject {
     @Published var  locations: [Location]
     // Current location on map
     @Published var mapLocation: Location {
-        didSet {
+        didSet { 
             updateMapRegion(location: mapLocation)
         }
     }
@@ -25,6 +25,8 @@ class LocationsViewModel: ObservableObject {
     
     // Show list of locations
     @Published var showLocationsList: Bool = false
+    // Show location detail via sheet
+    @Published var sheetLocation: Location? = nil 
     
     init() {
         let locations = LocationsDataService.locations
