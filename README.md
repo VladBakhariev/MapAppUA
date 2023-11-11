@@ -1,1 +1,2 @@
 # MapAppUA/
+ver. without ua 
